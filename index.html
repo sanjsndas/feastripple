@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeastRipple - Where Every Great Meal Creates a Ripple</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #FF6B35;
+            --secondary: #FFD166;
+            --accent: #EF476F;
+            --dark: #073B4C;
+            --light: #F8F9FA;
+            --success: #06D6A0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin: 0 8px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: var(--dark);
+            margin: 30px 0 20px;
+            font-size: 28px;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Cooking Tips Section */
+        .cooking-tips {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tip-card {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .tip-card h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        /* Recipes Section */
+        .recipes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .recipe-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .recipe-content {
+            padding: 20px;
+        }
+        
+        .recipe-title {
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        .recipe-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .recipe-ripples {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .recipe-desc {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .recipe-link {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .recipe-link:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .recipes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FeastRipple<span></span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>Where Every Great Meal Creates a Ripple</h1>
+        
+       
+        
+        <section class="featured-recipes">
+            <h2>Shareable Recipes (17 Crowd-Pleasers)</h2>
+            <div class="recipes-container">
+                <!-- Recipe 1 -->
+                <div class="recipe-card">
+                    <img src="r1.webp" alt="Loaded Nacho Platter" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Ultimate Nacho Platter</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 8-10</span>
+                            <span class="recipe-ripples">1,243 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">A mountain of crispy tortilla chips loaded with melted cheese, seasoned beef, fresh toppings, and zesty sauces.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 2 -->
+                <div class="recipe-card">
+                    <img src="r2.webp" alt="Pasta Salad" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Rainbow Pasta Salad</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 12</span>
+                            <span class="recipe-ripples">892 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Tricolor rotini with cherry tomatoes, cucumbers, olives, and pepperoni in a tangy Italian dressing.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 3 -->
+                <div class="recipe-card">
+                    <img src="r3.webp" alt="Pulled Pork Sliders" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Slow-Cooker Pulled Pork Sliders</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 15</span>
+                            <span class="recipe-ripples">1,507 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Tender pork shoulder cooked to perfection, served on mini buns with coleslaw and pickles.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 4 -->
+                <div class="recipe-card">
+                    <img src="r4.webp" alt="Vegetable Platter" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Crudité Spectacular</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 10-12</span>
+                            <span class="recipe-ripples">654 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">A stunning array of fresh vegetables with three delicious dips: ranch, hummus, and green goddess.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 5 -->
+                <div class="recipe-card">
+                    <img src="r5.webp" alt="Baked Ziti" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Cheesy Baked Ziti</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 8</span>
+                            <span class="recipe-ripples">1,089 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Pasta tubes layered with ricotta, mozzarella, and meat sauce, baked until bubbly and golden.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 6 -->
+                <div class="recipe-card">
+                    <img src="r6.webp" alt="Taco Bar" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Build-Your-Own Taco Bar</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 10</span>
+                            <span class="recipe-ripples">1,876 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">All the fixings for perfect tacos: three protein options, fresh toppings, salsas, and warm tortillas.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 7 -->
+                <div class="recipe-card">
+                    <img src="r7.webp" alt="Chicken Wings" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Triple Threat Chicken Wings</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 6-8</span>
+                            <span class="recipe-ripples">2,145 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Crispy baked wings with three sauce options: buffalo, BBQ, and garlic parmesan.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 8 -->
+                <div class="recipe-card">
+                    <img src="r8.webp" alt="Potato Salad" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Classic Potato Salad</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 12</span>
+                            <span class="recipe-ripples">987 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Creamy, tangy potato salad with hard-boiled eggs, celery, and a hint of mustard.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 9 -->
+                <div class="recipe-card">
+                    <img src="r9.webp" alt="Meatball Subs" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Party-Size Meatball Subs</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 10</span>
+                            <span class="recipe-ripples">1,432 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Juicy homemade meatballs in marinara sauce, served on crusty rolls with melted cheese.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 10 -->
+                <div class="recipe-card">
+                    <img src="r10.webp" alt="Mac and Cheese" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Ultimate Baked Mac & Cheese</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 8</span>
+                            <span class="recipe-ripples">1,765 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Three-cheese sauce with a crispy breadcrumb topping - always the first dish to disappear!</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 11 -->
+                <div class="recipe-card">
+                    <img src="r11.webp" alt="Charcuterie Board" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Festive Charcuterie Board</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 10-15</span>
+                            <span class="recipe-ripples">1,321 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Artfully arranged cured meats, cheeses, fruits, nuts, and accompaniments for grazing.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 12 -->
+                <div class="recipe-card">
+                    <img src="r12.webp" alt="Chili" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Big Batch Beef Chili</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 12</span>
+                            <span class="recipe-ripples">1,543 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Hearty chili with ground beef, beans, and just the right amount of spice. Serve with all the toppings!</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 13 -->
+                <div class="recipe-card">
+                    <img src="r13.webp" alt="Lasagna" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Feast-Size Lasagna</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 16</span>
+                            <span class="recipe-ripples">2,010 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Layers of pasta, meat sauce, and cheese that feeds a crowd and makes great leftovers.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 14 -->
+                <div class="recipe-card">
+                    <img src="r14.webp" alt="Sliders" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Mini Burger Sliders</h3>
+                        <div class="recipe-meta">
+                            <span>Serves 12</span>
+                            <span class="recipe-ripples">1,298 Ripples</span>
+                        </div>
+                        <p class="recipe-desc">Juicy mini burgers with all the fixings - perfect for parties where guests want to try a bit of everything.</p>
+                        <a href="#" class="recipe-link">View Recipe</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+         <section class="cooking-tips">
+            <h2>Cooking Tips for Crowd-Pleasing Meals</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>Prep Ahead</h3>
+                    <p>Chop vegetables, measure ingredients, and prepare sauces a day before your gathering to reduce stress.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Balance Flavors</h3>
+                    <p>Ensure your menu has a mix of sweet, salty, sour, and umami flavors to please all palates.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Serve at Room Temp</h3>
+                    <p>Many dishes taste better when not piping hot. Remove from fridge 30 mins before serving.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Double the Dips</h3>
+                    <p>Always make extra dips and sauces - they disappear faster than you think!</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Label Allergens</h3>
+                    <p>Use small cards to note common allergens (nuts, dairy, gluten) for each dish.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Create a Flow</h3>
+                    <p>Arrange food in a logical order (appetizers → mains → sides → desserts) to guide guests.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="copyright">© 2023 FeastRipple. Spreading Joy, One Feast at a Time.</p>
+        </div>
+    </footer>
+</body>
+</html>

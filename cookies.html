@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - FeastRipple | Understanding Our Use of Cookies</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #FF6B35;
+            --secondary: #FFD166;
+            --accent: #EF476F;
+            --dark: #073B4C;
+            --light: #F8F9FA;
+            --success: #06D6A0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin: 0 8px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: var(--dark);
+            margin: 30px 0 20px;
+            font-size: 28px;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        /* Cookie Content */
+        .cookie-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .effective-date {
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .policy-section {
+            margin-bottom: 30px;
+        }
+        
+        .policy-point {
+            margin-bottom: 25px;
+        }
+        
+        .policy-point h4 {
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .policy-point p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: rgba(255, 214, 102, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .contact-info-box {
+            background-color: rgba(6, 214, 160, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        .cookie-table th, .cookie-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .cookie-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .cookie-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .cookie-table tr:hover {
+            background-color: #ddd;
+        }
+        
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .cookie-consent p {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cookie-accept {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .cookie-decline {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .cookie-settings {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+        }
+        
+        .cookie-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-about {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-contact {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-contact .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact .contact-icon {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+            }
+            
+            .footer-about {
+                margin-right: 0;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent p {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .cookie-consent-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FeastRipple<span></span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>Cookie Policy</h1>
+        <p class="effective-date">Last Updated: June 30, 2023</p>
+        
+        <div class="cookie-content">
+            <div class="policy-section">
+                <p>At FeastRipple, we use cookies and similar tracking technologies to enhance your experience on our website. This Cookie Policy explains what cookies are, how we use them, the types of cookies we use, and how you can manage your cookie preferences. By continuing to use our website, you consent to our use of cookies in accordance with this policy.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Summary:</strong> Cookies are small text files that help websites remember your preferences. We use essential, performance, functional, and marketing cookies. You can control cookies through browser settings or our consent tool. Some features may not work without cookies. We respect Do Not Track signals and global privacy regulations.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>1. What Are Cookies?</h2>
+                
+                <div class="policy-point">
+                    <h4>1.1 Definition and Function</h4>
+                    <p>Cookies are small text files placed on your device when you visit websites. They store information about your interactions and preferences. Cookies enable websites to recognize users and remember important information. They make online experiences more efficient and personalized. Without cookies, websites would treat you as a new visitor each time you changed pages.</p>
+                    <p>Cookies perform essential functions like maintaining secure sessions and remembering login details. They help websites understand user behavior through analytics. Cookies can store preferences like language settings or font sizes. They enable features like shopping carts on e-commerce sites. Most modern websites use multiple types of cookies for different purposes.</p>
+                    <p>First-party cookies are set by the website you're visiting directly. Third-party cookies come from external services embedded in the site. Session cookies expire when you close your browser. Persistent cookies remain until their expiration date or until you delete them. Flash cookies and pixel tags are similar technologies with different storage mechanisms.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>1.2 How We Use Cookies</h4>
+                    <p>We use cookies to provide basic website functionality and security. They enable features like account logins and shopping carts. Performance cookies help us understand how visitors use our site. This data informs improvements to navigation and content organization. Functional cookies remember your preferences for future visits.</p>
+                    <p>Advertising cookies help deliver relevant marketing messages. They track campaign performance across different channels. Social media cookies enable sharing content and interacting with plugins. Analytics cookies collect aggregated usage statistics. We use this data to optimize page layouts and feature placement.</p>
+                    <p>Some cookies help prevent fraudulent activity and enhance security. They can detect multiple failed login attempts. Load balancing cookies distribute server traffic efficiently. Preference cookies store settings like region or currency. We carefully evaluate each cookie's purpose and necessity before implementation.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>1.3 Legal Basis for Cookie Usage</h4>
+                    <p>Essential cookies don't require consent as they're necessary for basic functions. For all other cookies, we obtain consent through our cookie banner. The legal basis is your explicit permission under privacy regulations. You can withdraw consent at any time through cookie settings. We document and store consent decisions for compliance purposes.</p>
+                    <p>GDPR requires clear information about cookie purposes and durations. CCPA gives California residents rights to opt-out of cookie-based data sales. ePrivacy Directive mandates prior consent for non-essential cookies. We comply with all applicable regulations based on user location. Our cookie practices are regularly reviewed for legal compliance.</p>
+                    <p>We conduct Data Protection Impact Assessments for cookie-related processing. Our Data Protection Officer oversees cookie compliance. Cookie policies are reviewed annually or when introducing new technologies. We maintain records of consent for regulatory audits. Users can access information about cookies used on their devices.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>2. Types of Cookies We Use</h2>
+                
+                <div class="policy-point">
+                    <h4>2.1 Essential Cookies</h4>
+                    <p>Essential cookies are strictly necessary for website operation. They enable core functions like security and authentication. Without these cookies, services you request cannot be provided. Examples include session cookies for logged-in users and load balancer cookies. These cookies don't store personally identifiable information.</p>
+                    <p>Security cookies help prevent cross-site request forgery attacks. Authentication cookies maintain your logged-in status across pages. Shopping cart cookies remember items you've added during browsing. Fraud prevention cookies analyze patterns for suspicious activity. Consent management cookies store your cookie preferences.</p>
+                    <p>Essential cookies typically expire when you close your browser. Some may persist longer for continuity of service. You can block these cookies through browser settings but site functionality will be impacted. We don't require consent for essential cookies under privacy laws. Their use represents our legitimate interest in website security.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.2 Performance Cookies</h4>
+                    <p>Performance cookies collect information about how visitors use our site. This includes pages visited, time spent, and error messages received. The data is aggregated and anonymized for analysis. We use this information to improve website performance and user experience. These cookies don't collect information that identifies visitors.</p>
+                    <p>Google Analytics cookies help measure traffic patterns and popular content. Heatmap cookies show where users click and scroll on pages. A/B testing cookies determine which page versions perform better. Error tracking cookies identify broken links or malfunctioning features. Load time cookies measure page speed across different regions.</p>
+                    <p>Performance cookies may be first-party or third-party implemented. We configure analytics tools to respect Do Not Track signals. Data is aggregated before analysis to protect privacy. You can opt-out of performance cookies without affecting site functionality. These cookies typically persist for 2-24 months depending on purpose.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.3 Functional Cookies</h4>
+                    <p>Functional cookies remember choices you make to enhance your experience. They enable personalized features and preferences. Examples include language selection, font size adjustments, and region-specific content. These cookies may also remember login details if you choose the "remember me" option. They make your interactions with the site more convenient.</p>
+                    <p>Video player cookies store volume and playback speed preferences. Chat widget cookies maintain conversation history during browsing. Form autofill cookies remember information to save typing time. Accessibility cookies preserve high-contrast or text-to-speech settings. Survey cookies prevent showing the same questionnaire repeatedly.</p>
+                    <p>The information these cookies collect may include personally identifiable data you've provided. They only track interactions with our website, not other sites. Functional cookies typically persist for several months to maintain preferences. You can disable them but may need to reset preferences each visit. Their use improves service quality without significant privacy impact.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.4 Targeting/Advertising Cookies</h4>
+                    <p>Advertising cookies track browsing habits to deliver relevant ads. They remember sites you visit and interests you demonstrate. This information may be shared with third-party advertisers. These cookies help measure ad campaign effectiveness. They can make ads more useful and reduce repetition.</p>
+                    <p>Retargeting cookies show our ads on other sites you visit. Affiliate cookies track referrals from partner websites. Social media cookies enable targeted advertising on platforms like Facebook. Frequency capping cookies limit how often you see the same ad. Conversion tracking cookies measure if ads lead to purchases.</p>
+                    <p>These cookies are typically persistent and long-lasting. They may track you across multiple websites. We provide clear opt-out mechanisms for advertising cookies. You can manage preferences through our cookie consent tool. Disabling these cookies won't reduce ad quantity, just relevance.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.5 Social Media Cookies</h4>
+                    <p>Social media cookies are set by services like Facebook and Twitter. They enable sharing content and interacting through plugins. These cookies may track your activity across multiple sites. Social platforms use them to build profiles of your interests. This data informs targeted advertising on their networks.</p>
+                    <p>Like buttons use cookies to count shares and display your profile picture. Embedded videos set cookies to track viewing history. Comment widgets use cookies to identify logged-in users. Social login cookies enable authentication through platform accounts. Some cookies persist even when you're not actively using the plugins.</p>
+                    <p>We implement social media widgets in privacy-enhanced modes where possible. You should review each platform's cookie policy for detailed information. Disabling these cookies may prevent some sharing features from working. Social cookies are controlled by the respective companies, not FeastRipple directly.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>3. Detailed Cookie List</h2>
+                
+                <div class="policy-point">
+                    <h4>3.1 First-Party Cookies</h4>
+                    
+                    <table class="cookie-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Name</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>fr_session</td>
+                                <td>Maintains user session state across page requests</td>
+                                <td>Session</td>
+                                <td>Essential</td>
+                            </tr>
+                            <tr>
+                                <td>fr_consent</td>
+                                <td>Stores your cookie consent preferences</td>
+                                <td>1 year</td>
+                                <td>Essential</td>
+                            </tr>
+                            <tr>
+                                <td>fr_cart</td>
+                                <td>Remembers items in your shopping cart</td>
+                                <td>7 days</td>
+                                <td>Essential</td>
+                            </tr>
+                            <tr>
+                                <td>fr_lang</td>
+                                <td>Stores language preference</td>
+                                <td>1 year</td>
+                                <td>Functional</td>
+                            </tr>
+                            <tr>
+                                <td>fr_theme</td>
+                                <td>Remembers dark/light mode preference</td>
+                                <td>1 year</td>
+                                <td>Functional</td>
+                            </tr>
+                            <tr>
+                                <td>fr_analytics</td>
+                                <td>Tracks page views and navigation paths</td>
+                                <td>2 years</td>
+                                <td>Performance</td>
+                            </tr>
+                            <tr>
+                                <td>fr_feedback</td>
+                                <td>Prevents repeated survey prompts</td>
+                                <td>90 days</td>
+                                <td>Functional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>3.2 Third-Party Cookies</h4>
+                    
+                    <table class="cookie-table">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Cookie Names</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Google Analytics</td>
+                                <td>_ga, _gid, _gat</td>
+                                <td>Website analytics and traffic measurement</td>
+                                <td>2 years</td>
+                                <td>Performance</td>
+                            </tr>
+                            <tr>
+                                <td>Facebook Pixel</td>
+                                <td>_fbp, fr</td>
+                                <td>Ad targeting and conversion tracking</td>
+                                <td>90 days</td>
+                                <td>Advertising</td>
+                            </tr>
+                            <tr>
+                                <td>Hotjar</td>
+                                <td>_hj*</td>
+                                <td>User behavior analytics and heatmaps</td>
+                                <td>1 year</td>
+                                <td>Performance</td>
+                            </tr>
+                            <tr>
+                                <td>Stripe</td>
+                                <td>__stripe_mid, __stripe_sid</td>
+                                <td>Payment processing and fraud prevention</td>
+                                <td>1 year</td>
+                                <td>Essential</td>
+                            </tr>
+                            <tr>
+                                <td>YouTube</td>
+                                <td>VISITOR_INFO1_LIVE, YSC</td>
+                                <td>Embedded video player functionality</td>
+                                <td>Session</td>
+                                <td>Functional</td>
+                            </tr>
+                            <tr>
+                                <td>Twitter</td>
+                                <td>personalization_id</td>
+                                <td>Social media integration and sharing</td>
+                                <td>2 years</td>
+                                <td>Advertising</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>3.3 Cookie Lifespans</h4>
+                    <p>Session cookies expire when you close your browser. Persistent cookies remain until their expiration date or until deleted. Essential cookies typically last from a few hours to one year. Performance cookies generally persist for 2-24 months. Functional cookies often expire after 1-12 months depending on purpose.</p>
+                    <p>Advertising cookies may remain active for several months to years. Social media cookie durations are set by the respective platforms. Some third-party cookies automatically renew upon subsequent visits. We regularly review cookie durations to minimize unnecessary data retention. Expired cookies are automatically deleted from your device.</p>
+                    <p>Cookie lifespans reflect their specific purposes and requirements. Security cookies have shorter durations to reduce risk. Preference cookies last longer to maintain user settings. Analytics cookies balance data usefulness with privacy considerations. We document all cookie expiration periods in our data retention policy.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>4. Managing Cookie Preferences</h2>
+                
+                <div class="policy-point">
+                    <h4>4.1 Browser Controls</h4>
+                    <p>Most browsers allow you to view and manage cookies through settings. You can typically find these under Privacy or Security sections. Options include accepting all cookies, blocking third-party cookies, or disabling cookies entirely. Browser settings also let you delete existing cookies. Some browsers offer per-site cookie controls for granular management.</p>
+                    <p>Chrome users can access cookie settings via chrome://settings/cookies. Firefox provides detailed cookie management in Preferences > Privacy & Security. Safari allows cookie blocking through Preferences > Privacy. Edge offers cookie controls under Settings > Site Permissions. Opera includes cookie management in Settings > Privacy & Security.</p>
+                    <p>Blocking all cookies may prevent some websites from working properly. Many sites require certain cookies for basic functionality. Browser settings apply globally to all websites you visit. Some browsers offer exceptions for specific trusted sites. Private/incognito modes automatically delete cookies when closed.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.2 Our Consent Tool</h4>
+                    <p>Our cookie consent banner appears on your first visit. It explains cookie categories and requests your preferences. You can accept all, reject non-essential, or customize settings. The tool remembers your choices for future visits. You can reopen the consent dialog anytime through the footer link.</p>
+                    <p>The tool provides detailed information about each cookie's purpose. Toggle switches let you enable/disable categories individually. Your selections take effect immediately without page reload. We store your preferences in a consent cookie (fr_consent). Changing preferences updates this cookie accordingly.</p>
+                    <p>The tool complies with GDPR and CCPA requirements. It doesn't load non-essential cookies until consent is given. Withdrawal of consent stops further processing of affected cookies. Existing cookies remain until their expiration or manual deletion. The tool is regularly updated to reflect changes in our cookie usage.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.3 Do Not Track Signals</h4>
+                    <p>Do Not Track (DNT) is a browser setting that signals your privacy preference. When enabled, your browser sends a DNT header with web requests. We honor DNT signals by disabling non-essential tracking cookies. Essential cookies required for site operation will still be set.</p>
+                    <p>DNT doesn't automatically block all cookies or tracking technologies. Implementation varies across websites as no formal standard exists. We interpret DNT as opting out of third-party tracking cookies. First-party analytics may still collect aggregated usage data. The DNT setting doesn't affect cookie-based site functionality.</p>
+                    <p>You can enable DNT in most browsers through privacy settings. Chrome: Settings > Privacy and security > Send a "Do Not Track" request. Firefox: Options > Privacy & Security > Send websites a "Do Not Track" signal. Safari: Preferences > Privacy > Ask websites not to track me. Edge: Settings > Privacy, search, and services > Send "Do Not Track" requests.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.4 Opt-Out Tools</h4>
+                    <p>Industry programs offer centralized opt-out mechanisms for advertising cookies. The Digital Advertising Alliance provides YourAdChoices (optout.aboutads.info). Network Advertising Initiative offers an opt-out tool (optout.networkadvertising.org). These affect participating companies but not all advertisers.</p>
+                    <p>Google provides an Analytics opt-out browser add-on. Facebook offers ad preference management in account settings. Many ad networks provide individual opt-out mechanisms. These tools typically work by setting an opt-out cookie on your device. Clearing cookies may require repeating the opt-out process.</p>
+                    <p>For email tracking, disable automatic image loading in your email client. Use browser extensions that block tracking pixels. Consider privacy-focused browsers that limit tracking by default. Mobile devices offer advertising ID resets in system settings. VPNs and private browsing modes provide additional privacy layers.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.5 Mobile Device Controls</h4>
+                    <p>Mobile operating systems provide cookie management through browser settings. iOS allows cookie blocking in Settings > Safari > Privacy & Security. Android offers controls in Chrome's Site Settings. Both platforms let you clear cookies and browsing data system-wide.</p>
+                    <p>Mobile apps may use similar tracking technologies to cookies. iOS provides App Tracking Transparency framework for control. Android offers opt-out of ads personalization in Google settings. Reset your advertising ID periodically to disrupt tracking profiles. Review app permissions to limit unnecessary data access.</p>
+                    <p>Tablet devices follow similar controls to their smartphone counterparts. Some mobile browsers offer enhanced privacy features by default. Consider using private browsing modes on shared devices. Be cautious when allowing "remember me" options on mobile browsers. Mobile operating systems are adding more granular privacy controls with each update.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>5. Cookie-Related Technologies</h2>
+                
+                <div class="policy-point">
+                    <h4>5.1 Web Beacons/Pixel Tags</h4>
+                    <p>Web beacons are tiny transparent images embedded in web pages or emails. Also called pixel tags or clear GIFs, they track user interactions. When loaded, they can record page views, email opens, or ad impressions. Beacons often work with cookies to enhance tracking capabilities. They're commonly used in marketing campaigns and analytics.</p>
+                    <p>We use pixels for conversion tracking and campaign measurement. They help determine if ads lead to desired actions. Email pixels track open rates to improve communication strategies. Some pixels facilitate retargeting across different websites. Unlike cookies, beacons can't be blocked through browser settings alone.</p>
+                    <p>Blocking images in emails prevents open tracking. Browser extensions can detect and block tracking pixels. Privacy-focused email clients often disable remote images by default. Some analytics providers offer pixel-less alternatives using JavaScript. We minimize pixel use to essential marketing performance measurement.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.2 Local Storage</h4>
+                    <p>Local Storage (HTML5 Web Storage) provides larger client-side storage than cookies. It persists after browser closure and has no expiration date. Data remains until explicitly cleared by user or website. We use localStorage for caching large preference sets and offline functionality. It's more efficient than cookies for storing non-sensitive data.</p>
+                    <p>Common uses include saving complex UI states and application data. Local Storage can improve performance by reducing server requests. Unlike cookies, data isn't transmitted with each HTTP request. Storage limits are much higher (typically 5-10MB per domain). Data is only accessible to pages from the same origin.</p>
+                    <p>You can clear Local Storage through browser developer tools. Some privacy extensions automatically purge storage data. Private browsing modes typically don't persist Local Storage. We only use it for legitimate functional purposes, not tracking. Data is encrypted when containing sensitive information.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.3 IndexedDB</h4>
+                    <p>IndexedDB is a low-level API for client-side storage of significant amounts of structured data. It enables offline functionality for web applications. We use it to cache product catalogs and user-generated content. IndexedDB supports indexing for high-performance searches. It's more powerful than Local Storage for complex data needs.</p>
+                    <p>Progressive Web Apps rely on IndexedDB for offline operation. It can store files and blobs in addition to structured data. Storage limits are typically 50% of available disk space. Data persists until explicitly cleared or the storage limit is reached. We implement automatic cleanup of stale IndexedDB data.</p>
+                    <p>IndexedDB data is origin-scoped like Local Storage. Clearing site data through browser settings removes IndexedDB content. Some browsers allow inspecting stored data through developer tools. We encrypt sensitive information before storage. IndexedDB usage follows the same consent requirements as cookies.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.4 Service Workers</h4>
+                    <p>Service Workers are scripts that run in the background, separate from web pages. They enable features like push notifications and offline caching. We use them to improve performance through resource caching. Service Workers can intercept network requests for advanced functionality. They're fundamental to Progressive Web App technology.</p>
+                    <p>Cached assets reduce load times for return visitors. Offline mode provides basic functionality without internet access. Background sync allows deferred actions until connection resumes. Push notifications require explicit user permission. Service Workers have no access to DOM but can communicate with pages.</p>
+                    <p>You can manage Service Workers through browser developer tools. Clearing site data typically unregisters Service Workers. Some browsers show active Service Workers in settings. We only register Service Workers for legitimate performance purposes. They operate independently of cookie consent but respect privacy preferences.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>6. Legal and Compliance</h2>
+                
+                <div class="policy-point">
+                    <h4>6.1 GDPR Compliance</h4>
+                    <p>The General Data Protection Regulation (GDPR) governs cookie usage in the EU. We comply with requirements for lawful basis and user rights. Consent must be freely given, specific, informed, and unambiguous. Pre-ticked boxes or implied consent don't meet GDPR standards. Users must be able to withdraw consent as easily as give it.</p>
+                    <p>Our cookie banner provides granular category options. We document all consents for compliance verification. Regular audits ensure ongoing GDPR adherence. Data Protection Impact Assessments evaluate new tracking technologies. Users can request access to cookie-related personal data we hold.</p>
+                    <p>We appoint a Data Protection Officer for oversight. Cookie policies are reviewed annually for compliance. International data transfers follow GDPR adequacy decisions. Breach notification procedures include cookie-related incidents. Training programs ensure staff understand cookie compliance requirements.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>6.2 CCPA Compliance</h4>
+                    <p>The California Consumer Privacy Act (CCPA) grants specific rights regarding cookies. California residents can opt-out of "sale" of personal information. Under CCPA, some cookie-based data sharing may constitute a sale. We provide a clear "Do Not Sell My Personal Information" link. Opt-out requests are honored within 45 days.</p>
+                    <p>Our systems track CCPA opt-outs to prevent covered sharing. We don't discriminate against users who exercise CCPA rights. Verified requests can access cookie-related data collected in past 12 months. Deletion requests extend to personal information from cookies. We disclose cookie practices in our annual CCPA disclosures.</p>
+                    <p>Service providers receiving cookie data are CCPA-compliant. We honor Global Privacy Control signals as opt-out requests. Cookie policies include CCPA-mandated disclosures. Staff training covers CCPA requirements for cookie usage. Compliance is verified through regular audits and assessments.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>6.3 ePrivacy Directive</h4>
+                    <p>The EU ePrivacy Directive (Cookie Law) requires prior consent for non-essential cookies. We implement strict opt-in for all cookies except strictly necessary ones. Consent must be obtained before setting any tracking cookies. Banner design follows best practices for clarity and accessibility. Rejecting cookies must be as easy as accepting them.</p>
+                    <p>We provide detailed information about each cookie's purpose. Settings allow granular control by cookie category. Consent is renewed annually or when cookie usage changes significantly. The banner reappears if cookie preferences are reset. We maintain records of consent for regulatory compliance.</p>
+                    <p>Cookie policies are written in clear, understandable language. Essential/non-essential distinctions are clearly explained. Third-party cookie usage is disclosed with provider information. Regular reviews ensure ongoing ePrivacy Directive compliance. National implementations across EU member states are respected.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>6.4 International Considerations</h4>
+                    <p>Cookie laws vary significantly across jurisdictions. We tailor practices to meet regional requirements. GDPR standards are applied globally as our baseline. Additional protections are implemented for stricter regulations. Local legal counsel advises on country-specific obligations.</p>
+                    <p>Brazil's LGPD requires specific cookie consent mechanisms. South Africa's POPIA mandates secure cookie data handling. Canada's PIPEDA necessitates meaningful consent for tracking. Australia's Privacy Act includes cookie-related protections. We monitor emerging regulations worldwide to maintain compliance.</p>
+                    <p>Geolocation determines which rules apply to each visitor. Consent interfaces adapt to regional requirements. Documentation is available in multiple languages. Cross-border data transfers follow applicable legal frameworks. Regular training keeps staff informed of global developments.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>7. Security Measures</h2>
+                
+                <div class="policy-point">
+                    <h4>7.1 Cookie Security Features</h4>
+                    <p>We implement multiple security features for protection. Secure flag ensures cookies only transmit over HTTPS. HttpOnly flag prevents JavaScript access to sensitive cookies. SameSite attribute mitigates cross-site request forgery risks. Short lifespans reduce exposure of session cookies. Regular rotation of cryptographic keys enhances security.</p>
+                    <p>Authentication cookies are encrypted and signed. Session identifiers are randomly generated with high entropy. Cookies containing personal data are minimized. Secure storage mechanisms protect client-side data. Security headers provide additional protection layers.</p>
+                    <p>Web Application Firewalls monitor for malicious cookie activity. Intrusion detection systems flag suspicious patterns. Regular penetration testing identifies vulnerabilities. Bug bounty programs encourage responsible disclosure. Incident response plans address potential cookie-related breaches.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>7.2 Data Protection</h4>
+                    <p>Cookie data is protected according to its sensitivity. Personal information in cookies is minimized and encrypted. Access controls restrict internal cookie data usage. Anonymization techniques protect privacy in analytics. Data retention policies ensure timely deletion.</p>
+                    <p>We conduct Privacy Impact Assessments for cookie implementations. Data Protection by Design principles guide development. Third-party processors undergo security vetting. Regular audits verify compliance with protection standards. Staff receive data protection training annually.</p>
+                    <p>Breach notification procedures include cookie-related incidents. Disaster recovery plans address data loss scenarios. Backups are encrypted and access-controlled. Physical security protects server infrastructure. Continuous monitoring detects anomalies in real-time.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>8. Changes to This Policy</h2>
+                
+                <div class="policy-point">
+                    <h4>8.1 Update Procedures</h4>
+                    <p>We review this Cookie Policy annually or when needed. Changes reflect evolving technologies and legal requirements. Significant modifications trigger renewed consent requests. Version control maintains historical policy records. Stakeholders are consulted before implementing changes.</p>
+                    <p>Notification procedures inform users of material changes. Website banners highlight updated policies. Email notifications may be sent for major revisions. The "Last Updated" date reflects the current version. Archived policies remain available upon request.</p>
+                    <p>Change logs document all policy modifications. Legal counsel reviews substantive updates. Staff training incorporates policy changes. Third-party vendors are notified of relevant updates. Compliance is verified after implementing changes.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>9. Contact Information</h2>
+                
+                <div class="contact-info-box">
+                    <h4>Data Protection Officer</h4>
+                    <p>For cookie-related inquiries or to exercise your rights, please contact:</p>
+                    <p><strong>Email:</strong> <a href="mailto:privacy@feastripple.com">privacy@feastripple.com</a></p>
+                    <p><strong>Mail:</strong> FeastRipple Privacy Office, 123 Culinary Lane, Suite 200, San Francisco, CA 94107</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567 (ask for Privacy Officer)</p>
+                    <p>We aim to respond to all legitimate requests within 30 days. Complex requests may require additional time. There is typically no charge for reasonable requests.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>9.1 Detailed Contact Points</h4>
+                    <ol>
+                        <li>
+                            <strong>General Cookie Inquiries</strong>
+                            <p>For general questions about our cookie usage, contact cookies@feastripple.com. Our team responds within 2 business days with detailed information. Include specific questions to receive comprehensive answers. We provide explanations suitable for both technical and non-technical users. Common inquiries include cookie purposes, durations, and management options. Multilingual support is available for international users. All correspondence is documented for quality assurance. Responses reference relevant policy sections for clarity. Follow-up questions are encouraged for complete understanding.</p>
+                        </li>
+                        <li>
+                            <strong>Consent Management</strong>
+                            <p>For issues regarding cookie consent preferences, email consent@feastripple.com. Describe the specific problem you're experiencing with our consent tool. Technical support can troubleshoot non-functioning preference settings. Requests to update or withdraw consent are processed immediately. Verification may be required for security purposes. We confirm all consent changes in writing. Historical consent records are maintained for compliance. Problems are typically resolved within 48 hours. Detailed logs help identify recurring issues for improvement.</p>
+                        </li>
+                        <li>
+                            <strong>Opt-Out Requests</strong>
+                            <p>To opt-out of specific cookie categories, use our online preference center or email optout@feastripple.com. Specify which tracking technologies you wish to disable. Opt-out requests are processed within 5 business days. We confirm implementation of your preferences. Some opt-outs require setting a new cookie on your device. Browser-based opt-outs may need to be repeated after clearing cookies. Global Privacy Control signals are automatically honored. We maintain suppression lists to prevent unwanted tracking. Annual reminders about opt-out options are available.</p>
+                        </li>
+                        <li>
+                            <strong>Data Subject Access Requests</strong>
+                            <p>For access to personal data collected via cookies, submit requests to dsar@feastripple.com. Include proof of identity for verification purposes. We provide data in a structured, commonly-used format. Response time is within 30 days as required by law. Complex requests may warrant a 60-day extension with notification. No fee is charged unless the request is manifestly unfounded. Data is provided securely via encrypted channels. Redaction may apply to protect others' privacy. Clarification may be sought to locate relevant information accurately.</p>
+                        </li>
+                        <li>
+                            <strong>Deletion Requests</strong>
+                            <p>To request deletion of cookie-collected personal data, email delete@feastripple.com. Specify which data you want erased and its source. We confirm deletion completion within regulatory timeframes. Some data may be retained for legal compliance needs. Residual copies may persist in backup systems temporarily. Deletion doesn't affect anonymized or aggregated data. Third-party data recipients are notified when applicable. We provide details about what was deleted upon request. Follow-up confirms permanent removal from active systems.</p>
+                        </li>
+                        <li>
+                            <strong>Cookie Complaints</strong>
+                            <p>For complaints about our cookie practices, contact complaints@feastripple.com. Describe the nature of your complaint in detail. Complaints are acknowledged within 48 hours. Investigations are completed within 30 calendar days. Complex cases may require additional time with updates provided. Resolution proposals aim to address all concerns fairly. Unresolved complaints may be escalated to supervisory authorities. All complaints contribute to ongoing policy improvements. Anonymous complaints are accepted but limit follow-up options.</p>
+                        </li>
+                        <li>
+                            <strong>Technical Support</strong>
+                            <p>For technical issues related to cookies, email support@feastripple.com. Include browser type, version, and operating system details. Describe the problem and steps to reproduce it. Screenshots or error messages help diagnose issues. Common problems include cookie conflicts and preference saving failures. Support is available Monday-Friday 9am-5pm PST. Critical issues are prioritized for rapid response. Solutions are documented in our knowledge base for future reference. Follow-up ensures problems are fully resolved.</p>
+                        </li>
+                        <li>
+                            <strong>Legal Compliance</strong>
+                            <p>For legal inquiries regarding cookie compliance, contact legal@feastripple.com. Our legal team responds to formal notices and regulator inquiries. Law enforcement requests require valid legal process. We carefully review all legal demands for validity and scope. International legal frameworks are respected appropriately. Data transfer mechanisms are documented for transparency. Legal counsel is involved in significant policy changes. Compliance certifications are available upon legitimate request. We cooperate with regulatory investigations as required by law.</p>
+                        </li>
+                        <li>
+                            <strong>Accessibility Assistance</strong>
+                            <p>For help accessing cookie information with disabilities, email accessibility@feastripple.com. We provide policy information in alternative formats upon request. Consent interfaces meet WCAG 2.1 AA standards. Screen reader testing ensures compatibility with assistive technologies. Text-only versions are available for low-bandwidth users. Large print materials can be arranged with advance notice. Sign language interpreters are available for meetings. Feedback improves accessibility of future implementations. Training ensures staff can assist users with diverse needs.</p>
+                        </li>
+                        <li>
+                            <strong>Vendor Inquiries</strong>
+                            <p>Third-party vendors with cookie-related questions should email vendors@feastripple.com. Include your company name and contract details. New vendors must complete privacy compliance questionnaires. Existing vendors receive regular audits of cookie practices. Data processing agreements outline specific obligations. Vendor management oversees third-party cookie implementations. Security assessments evaluate vendor systems handling cookie data. Incident response plans coordinate with key vendors. Performance metrics ensure ongoing compliance with standards.</p>
+                        </li>
+                        <li>
+                            <strong>Press Inquiries</strong>
+                            <p>Media representatives should contact press@feastripple.com for cookie policy statements. Our communications team provides official company positions. Interviews with subject matter experts can be arranged. Background materials explain technical aspects clearly. Press releases announce significant policy changes. Media kits include approved graphics and statistics. Spokespeople are available for on-the-record comments. Fact-checking ensures accurate reporting of cookie practices. Follow-up clarifies any aspects of coverage.</p>
+                        </li>
+                        <li>
+                            <strong>Investor Relations</strong>
+                            <p>Investors with questions about cookie-related risks email ir@feastripple.com. Annual reports disclose material privacy risks and compliance costs. Cookie practices are reviewed during due diligence processes. Regulatory compliance affects financial projections. Data protection measures reduce potential liability. Incident response capabilities mitigate breach impacts. Investor briefings explain evolving privacy regulations. Board oversight ensures proper resource allocation. Transparency builds confidence in responsible data practices.</p>
+                        </li>
+                        <li>
+                            <strong>Partnership Opportunities</strong>
+                            <p>Potential partners should email partnerships@feastripple.com regarding cookie integrations. Describe the proposed collaboration and mutual benefits. Technical specifications ensure compatibility with our systems. Privacy impact assessments evaluate new tracking methods. Contractual terms address data protection responsibilities. Integration testing verifies proper cookie handling. Launch plans include user communication strategies. Performance metrics track partnership effectiveness. Regular reviews maintain alignment with privacy standards.</p>
+                        </li>
+                        <li>
+                            <strong>Bug Reports</strong>
+                            <p>Security researchers email security@feastripple.com about cookie vulnerabilities. Our bug bounty program rewards responsible disclosure. Detailed reports should include proof-of-concept examples. Critical issues receive immediate attention. Coordinated disclosure timelines protect users. Public acknowledgments credit researchers appropriately. Fixes are thoroughly tested before deployment. Vulnerability management processes prevent recurrence. Ongoing monitoring detects similar issues across systems.</p>
+                        </li>
+                        <li>
+                            <strong>Policy Feedback</strong>
+                            <p>Suggestions for improving our Cookie Policy go to policy-feedback@feastripple.com. We welcome constructive input from all stakeholders. User experience insights help clarify complex topics. Legal experts can propose more compliant formulations. Privacy advocates suggest enhanced protections. Technical contributors recommend accurate terminology. All feedback is reviewed during annual policy updates. Contributors receive responses explaining adoption decisions. Public changelogs acknowledge meaningful contributions.</p>
+                        </li>
+                        <li>
+                            <strong>Training Requests</strong>
+                            <p>Organizations seeking cookie compliance training email training@feastripple.com. We offer workshops tailored to different audience levels. Executive briefings cover strategic implications. Technical teams learn implementation best practices. Legal departments receive regulatory analysis. Custom programs address specific industry needs. Materials are updated quarterly for current information. Follow-up consultations reinforce learning. Certificates document completed training. Participant feedback continuously improves content.</p>
+                        </li>
+                        <li>
+                            <strong>International Offices</strong>
+                            <p>Region-specific inquiries use our global contact points. EU: privacy-eu@feastripple.com handles GDPR matters. UK: privacy-uk@feastripple.com addresses post-Brexit requirements. California: privacy-ca@feastripple.com manages CCPA compliance. Brazil: privacy-br@feastripple.com focuses on LGPD questions. APAC: privacy-apac@feastripple.com serves Asian markets. Local language support is available during business hours. Cultural nuances inform regionally appropriate responses. Cross-border issues are coordinated centrally when needed.</p>
+                        </li>
+                        <li>
+                            <strong>Emergency Contact</strong>
+                            <p>For urgent cookie-related security incidents, call +1 (555) 987-6543. This 24/7 line handles active breaches and system compromises. Provide your name, organization, and nature of the emergency. Authorized personnel will initiate response procedures. Follow-up documentation is required after resolution. This number is strictly for genuine emergencies. Non-urgent matters directed here will delay critical responses. All calls are logged and reviewed for quality assurance.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3 class="footer-title">About FeastRipple</h3>
+                    <p>FeastRipple celebrates how good food creates a ripple effect — from one plate to a whole table, from one meal to joyful gatherings. Our mission is to inspire and enable shared culinary experiences that bring people together.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>123 Culinary Lane<br>Suite 200<br>San Francisco, CA 94107</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <div>+1 (555) 123-4567</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div><a href="mailto:hello@feastripple.com" style="color:white;">hello@feastripple.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>Mon-Fri: 9am-5pm PST<br>Sat-Sun: Closed</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="copyright">© 2023 FeastRipple. All Rights Reserved. "Where Every Great Meal Creates a Ripple"</p>
+        </div>
+    </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of all cookies. You can manage your preferences by clicking "Settings".</p>
+        <div class="cookie-consent-buttons">
+            <button class="cookie-btn cookie-settings" id="cookieSettings">Settings</button>
+            <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+            <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const cookieAccept = document.getElementById('cookieAccept');
+            const cookieDecline = document.getElementById('cookieDecline');
+            const cookieSettings = document.getElementById('cookieSettings');
+            
+            // Check if cookie consent has been given
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieConsent.style.display = 'flex';
+            }
+            
+            // Accept button handler
+            cookieAccept.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.style.display = 'none';
+                // Here you would also load all cookies
+            });
+            
+            // Decline button handler
+            cookieDecline.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieConsent.style.display = 'none';
+                // Here you would only load essential cookies
+            });
+            
+            // Settings button handler
+            cookieSettings.addEventListener('click', function() {
+                // In a real implementation, this would open a modal with granular cookie settings
+                alert('Cookie settings would open here, allowing you to choose which types of cookies to accept.');
+            });
+        });
+    </script>
+</body>
+</html>

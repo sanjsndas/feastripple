@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FeastRipple | Protecting Your Personal Information</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #FF6B35;
+            --secondary: #FFD166;
+            --accent: #EF476F;
+            --dark: #073B4C;
+            --light: #F8F9FA;
+            --success: #06D6A0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin: 0 8px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: var(--dark);
+            margin: 30px 0 20px;
+            font-size: 28px;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        /* Privacy Content */
+        .privacy-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .effective-date {
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .policy-section {
+            margin-bottom: 30px;
+        }
+        
+        .policy-point {
+            margin-bottom: 25px;
+        }
+        
+        .policy-point h4 {
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .policy-point p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: rgba(255, 214, 102, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .contact-info-box {
+            background-color: rgba(6, 214, 160, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-about {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-contact {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-contact .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact .contact-icon {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+            }
+            
+            .footer-about {
+                margin-right: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FeastRipple<span></span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Last Updated: June 30, 2023</p>
+        
+        <div class="privacy-content">
+            <div class="policy-section">
+                <p>At FeastRipple, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our practices regarding your information.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Summary:</strong> We collect information to provide better services to our users. We only share personal information with your consent or as required by law. You have rights regarding your data, including access and deletion. We implement robust security measures to protect your information.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>1. Information We Collect</h2>
+                
+                <div class="policy-point">
+                    <h4>1.1 Personal Information</h4>
+                    <p>We collect personal information you voluntarily provide when registering, making purchases, or contacting us. This may include your name, email address, phone number, payment details, and demographic information. We use this to provide services, process transactions, and communicate with you. Collection occurs during account creation, checkout, newsletter signup, and customer service interactions.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>1.2 Usage Data</h4>
+                    <p>We automatically collect information about how you interact with our website. This includes IP addresses, browser type, device information, pages visited, and time spent. Usage data helps us analyze trends, administer the site, and improve user experience. We gather this through cookies, log files, and analytics tools. This data is aggregated and anonymized where possible.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>1.3 Cookies and Tracking Technologies</h4>
+                    <p>We use cookies and similar technologies to enhance functionality and personalize your experience. Cookies are small data files stored on your device that remember preferences and track usage. We utilize session cookies (temporary) and persistent cookies (remain until deleted). You can control cookies through browser settings, but disabling them may affect website functionality.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>1.4 Third-Party Data</h4>
+                    <p>We may receive information about you from third parties, such as social media platforms if you connect your accounts. This includes profile information and friend lists when you choose to link accounts. We combine this with data we collect directly to provide seamless experiences across platforms. We only access information you've authorized these services to share.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>2. How We Use Your Information</h2>
+                
+                <div class="policy-point">
+                    <h4>2.1 Service Provision</h4>
+                    <p>We use your information to deliver and maintain our services, including processing transactions and providing customer support. Your data enables account creation, order fulfillment, and personalized recommendations. We may contact you regarding account management, service updates, or security alerts. This processing is necessary to fulfill our contractual obligations to you.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.2 Personalization</h4>
+                    <p>We analyze your preferences and behavior to tailor content, recommendations, and advertising. This includes showing products based on purchase history and browsing patterns. Personalization enhances your experience by reducing irrelevant content. We may use machine learning to predict preferences and improve suggestions. You can opt-out of personalized advertising in account settings.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.3 Communication</h4>
+                    <p>We use contact information to send transactional messages, newsletters, and marketing communications. Transactional messages include order confirmations and service notifications. Marketing communications promote products and services, which you can unsubscribe from. We may contact you for feedback to improve our offerings. All emails include unsubscribe options.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.4 Analytics and Improvement</h4>
+                    <p>We analyze aggregated data to understand usage patterns and improve our services. This includes A/B testing, feature development, and bug fixes. Analytics help us measure performance and identify areas for enhancement. We may use third-party tools that process anonymized data. These insights drive our product roadmap and service improvements.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>2.5 Security and Fraud Prevention</h4>
+                    <p>We use information to maintain security, prevent fraud, and enforce our terms. This includes monitoring for suspicious activity and verifying identities. We may analyze login patterns to detect unauthorized access attempts. Fraud prevention measures protect both users and our business. Security processing is based on our legitimate business interests.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>3. Data Sharing and Disclosure</h2>
+                
+                <div class="policy-point">
+                    <h4>3.1 Service Providers</h4>
+                    <p>We share data with trusted third-party vendors who assist in operations. These include payment processors, hosting providers, and analytics services. Providers only receive necessary information to perform their functions. We vet all partners for compliance with privacy standards. Contracts require providers to protect data and limit use to specified purposes.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>3.2 Business Transfers</h4>
+                    <p>In mergers, acquisitions, or asset sales, user data may be transferred. We will notify you of any ownership changes affecting data handling. The acquiring entity must honor our privacy commitments. You may opt-out of data transfer in such events. This disclosure ensures continuity of service during corporate changes.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>3.3 Legal Compliance</h4>
+                    <p>We may disclose information when required by law or to protect rights. This includes responding to subpoenas, court orders, or legal processes. We only share what is legally necessary in such situations. We may also disclose data to prevent harm or illegal activities. We carefully review all legal requests for validity and scope.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>3.4 Aggregated Data</h4>
+                    <p>We share anonymized, aggregated statistics with partners and advertisers. This data cannot identify individual users. Examples include website traffic patterns and demographic trends. Aggregated data helps partners understand market segments. We use this information for business intelligence and market research.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>4. Data Security</h2>
+                
+                <div class="policy-point">
+                    <h4>4.1 Protection Measures</h4>
+                    <p>We implement industry-standard security measures to protect your data. This includes encryption (SSL/TLS), firewalls, and access controls. Regular security audits identify and address vulnerabilities. Systems are monitored for unauthorized access attempts. We follow best practices for data minimization and retention policies.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.2 Payment Security</h4>
+                    <p>All payment transactions are processed using secure encryption. We comply with PCI-DSS standards for handling payment data. Credit card numbers are tokenized and never stored on our servers. You should review payment processors' privacy policies separately. We recommend monitoring bank statements for unauthorized activity.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.3 Account Security</h4>
+                    <p>You are responsible for maintaining account credentials confidentiality. We encourage strong, unique passwords and two-factor authentication. Notify us immediately of any unauthorized account access. We cannot guarantee absolute security but employ reasonable protections. Users should be cautious when sharing personal information online.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>4.4 Breach Notification</h4>
+                    <p>In the event of a data breach, we will notify affected users promptly. Notifications will describe the nature of the breach and affected data. We will outline steps being taken to mitigate risks. Notifications will comply with applicable laws regarding timing and content. Users should follow recommended actions to protect themselves.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>5. Your Rights and Choices</h2>
+                
+                <div class="policy-point">
+                    <h4>5.1 Access and Correction</h4>
+                    <p>You may access and update your personal information through account settings. Requests for additional access can be made via our contact form. We will verify your identity before processing sensitive requests. You can correct inaccuracies or complete incomplete data. We aim to respond to access requests within 30 days.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.2 Data Portability</h4>
+                    <p>Upon request, we will provide your data in a structured, machine-readable format. This allows transfer to another service if desired. Portability applies to data you've provided and we've processed automatically. We may charge a reasonable fee for excessive or repetitive requests. Data will be provided without undue delay.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.3 Deletion Rights</h4>
+                    <p>You may request deletion of personal data under certain circumstances. Exceptions apply for legal compliance or legitimate business needs. Deletion requests can be made through account settings or by contacting us. Residual copies may remain in backup systems for a limited time. We will confirm when deletion is complete.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.4 Marketing Opt-Outs</h4>
+                    <p>You can unsubscribe from marketing communications at any time. Each email includes an unsubscribe link in the footer. You may also adjust preferences in account settings. Opting out doesn't affect transactional messages. We honor opt-out requests promptly, though some systems may take days to fully process.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>5.5 Cookie Controls</h4>
+                    <p>Most browsers allow you to manage cookie preferences. You can delete existing cookies or block new ones. Our cookie banner provides granular control over tracking technologies. Note that some features may not work without essential cookies. Refer to our Cookie Policy for detailed information.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>6. International Data Transfers</h2>
+                
+                <div class="policy-point">
+                    <h4>6.1 Cross-Border Transfers</h4>
+                    <p>As a global service, data may be transferred internationally. We ensure adequate protections for transfers outside your jurisdiction. This includes EU-US Privacy Shield frameworks or Standard Contractual Clauses. By using our services, you consent to such transfers. We disclose processing locations in our transparency reports.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>6.2 GDPR Compliance</h4>
+                    <p>For EU users, we comply with the General Data Protection Regulation. Our Data Protection Officer can be contacted for GDPR inquiries. EU residents have additional rights regarding data processing. We recognize the right to lodge complaints with supervisory authorities. Our legal basis for processing is outlined in relevant sections.</p>
+                </div>
+                
+                <div class="policy-point">
+                    <h4>6.3 CCPA Compliance</h4>
+                    <p>California residents have rights under the California Consumer Privacy Act. This includes knowing what data is collected and opting out of sales. We do not sell personal information as defined by CCPA. Designated methods exist for submitting CCPA requests. We verify requests to prevent fraudulent activity.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>7. Children's Privacy</h2>
+                
+                <div class="policy-point">
+                    <h4>7.1 Age Restrictions</h4>
+                    <p>Our services are not directed at children under 16 (or 13 in some regions). We do not knowingly collect data from underage users without parental consent. Parents may request review or deletion of children's information. Accounts for minors require verifiable parental approval. We take special care to protect children's privacy when processing their data.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>8. Third-Party Links</h2>
+                
+                <div class="policy-point">
+                    <h4>8.1 External Sites</h4>
+                    <p>Our website may contain links to third-party sites not controlled by us. We are not responsible for their privacy practices or content. We encourage reviewing privacy policies of any sites you visit. Links are provided for convenience and do not imply endorsement. Exercise caution when providing information to external sites.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>9. Policy Updates</h2>
+                
+                <div class="policy-point">
+                    <h4>9.1 Changes to Policy</h4>
+                    <p>We may update this policy periodically to reflect changes in practices. The "Last Updated" date indicates when revisions were made. Material changes will be communicated through prominent notices. Continued use after changes constitutes acceptance of the revised policy. We archive previous versions for reference upon request.</p>
+                </div>
+            </div>
+            
+            <div class="policy-section">
+                <h2>10. Contact Information</h2>
+                
+                <div class="contact-info-box">
+                    <h4>Data Protection Officer</h4>
+                    <p>For privacy-related inquiries or to exercise your rights, please contact:</p>
+                    <p><strong>Email:</strong> <a href="mailto:privacy@feastripple.com">privacy@feastripple.com</a></p>
+                    <p><strong>Mail:</strong> FeastRipple Privacy Office, 123 Culinary Lane, Suite 200, San Francisco, CA 94107</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567 (ask for Privacy Officer)</p>
+                    <p>We aim to respond to all legitimate requests within 30 days. Complex requests may require additional time. There is typically no charge for reasonable requests.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3 class="footer-title">About FeastRipple</h3>
+                    <p>FeastRipple celebrates how good food creates a ripple effect — from one plate to a whole table, from one meal to joyful gatherings. Our mission is to inspire and enable shared culinary experiences that bring people together.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>123 Culinary Lane<br>Suite 200<br>San Francisco, CA 94107</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <div>+1 (555) 123-4567</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div><a href="mailto:hello@feastripple.com" style="color:white;">hello@feastripple.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>Mon-Fri: 9am-5pm PST<br>Sat-Sun: Closed</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="copyright">© 2023 FeastRipple. All Rights Reserved. "Where Every Great Meal Creates a Ripple"</p>
+        </div>
+    </footer>
+</body>
+</html>
